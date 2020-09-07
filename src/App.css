@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f0f0f3;
+  margin: 5em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  margin: 15em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.header {
+  color: #96bf48;
+}
+
+.Search {
+  background-color: white;
+  padding: 1em;
+}
+
+.Search input {
+  width: 100%;
+}
+
+.SearchResults {
+  background-color: white;
+  flex: 1;
+  margin-top: 1em;
+  margin-right: 1em;
+  padding: 1em;
+}
+.Nominations {
+  background-color: white;
+  flex: 1;
+  margin-top: 1em;
+  margin-left: 1em;
+  padding: 1em;
+}
+
+.searchWrapper {
+  display: flex;
+  grid-template-columns: 1fr 0;
+}
+
+.fa-search {
+  display: grid;
+  width: 40px;
+  position: relative;
+  left: 45px;
+  font-size: 20px;
+  line-height: 40px;
+  z-index: 1;
+}
+
+.searchInput {
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.alertWrapper {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #96bf48;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
