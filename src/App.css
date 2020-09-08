@@ -89,7 +89,6 @@ body {
 
 .modal-body {
   padding: 10px 20px;
-  background: #fff;
 }
 
 .modal-header h2,
@@ -100,6 +99,8 @@ body {
 .modal-header {
   padding: 15px;
   color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .close {
