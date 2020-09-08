@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../App.css";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
 import Nominations from "./Nominations";
 import Alert from "./Alert";
-import Modal from "./Modal";
 
 function App() {
   const [movies, setMovies] = useState([]);

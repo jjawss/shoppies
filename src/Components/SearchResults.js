@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Alert from "./Alert";
 import Modal from "./Modal";
 
 function SearchResults(props) {

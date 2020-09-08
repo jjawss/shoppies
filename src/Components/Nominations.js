@@ -2,7 +2,7 @@ import React from "react";
 
 function Nominations(props) {
   function removeNomination(movie) {
-    props.setNominations(props.nominations.filter((nom) => nom != movie));
+    props.setNominations(props.nominations.filter((nom) => nom !== movie));
   }
   return (
     <div className="Nominations">
