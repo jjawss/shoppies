@@ -13,10 +13,6 @@ function SearchResults(props) {
     props.setModal(true);
   }
 
-  useEffect(() => {
-    console.log("search Results", props.selectedMovie);
-  });
-
   return (
     <div className="SearchResults">
       {props.searchTerms.length > 0 ? (
