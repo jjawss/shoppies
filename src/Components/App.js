@@ -4,21 +4,19 @@ import Search from "./Search";
 import SearchResults from "./SearchResults";
 import Nominations from "./Nominations";
 import Alert from "./Alert";
+import Modal from "./Modal";
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerms, setSearchTerms] = useState("");
   const [nominations, setNominations] = useState([]);
-  const [alertBanner, setAlertBanner] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState({});
 
   return (
     <div>
       <div className="alertWrapper">
-        {nominations.length === 5 ? (
-          <Alert className="Alert" />
-        ) : (
-          console.log("hello")
-        )}
+        {nominations.length === 5 ? <Alert className="Alert" /> : ""}
       </div>
       <div className="App">
         <h1 className="header">The Shoppies</h1>
@@ -36,6 +34,10 @@ function App() {
             searchTerms={searchTerms}
             nominations={nominations}
             setNominations={setNominations}
+            selectedMovie={selectedMovie}
+            setSelectedMovie={setSelectedMovie}
+            modal={modal}
+            setModal={setModal}
           />
           <Nominations
             nominations={nominations}

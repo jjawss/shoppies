@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Alert from "./Alert";
+import Modal from "./Modal";
 
 function SearchResults(props) {
   function nominateMovie(movie) {
@@ -7,6 +8,15 @@ function SearchResults(props) {
       props.setNominations([...props.nominations, movie]);
     }
   }
+
+  function selectMovie(movie) {
+    props.setSelectedMovie(movie);
+    props.setModal(true);
+  }
+
+  useEffect(() => {
+    console.log("search Results", props.selectedMovie);
+  });
 
   return (
     <div className="SearchResults">
@@ -20,7 +30,9 @@ function SearchResults(props) {
           <div>
             <ul>
               <li>
-                {movie["Title"]} ({movie["Year"]})
+                <span className="movie" onClick={() => selectMovie(movie)}>
+                  {movie["Title"]}({movie["Year"]})
+                </span>
                 <button
                   id="nominateButton"
                   onClick={() => nominateMovie(movie)}
@@ -30,6 +42,16 @@ function SearchResults(props) {
                 </button>
               </li>
             </ul>
+            {props.modal === true ? (
+              <Modal
+                className="modal"
+                modal={props.modal}
+                setModal={props.setModal}
+                selectedMovie={props.selectedMovie}
+              />
+            ) : (
+              ""
+            )}
           </div>
         );
       })}
