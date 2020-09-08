@@ -12,7 +12,7 @@ function Search(props) {
           onChange={(e) => {
             props.setSearchTerms(e.target.value);
             fetch(
-              `http://www.omdbapi.com/?s=${e.target.value}&apikey=9cd31428&`
+              `https://www.omdbapi.com/?s=${e.target.value}&apikey=9cd31428&`
             )
               .then((res) => res.json())
               .then((data) => {
