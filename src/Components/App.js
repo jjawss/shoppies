@@ -30,7 +30,6 @@ function App() {
         <div className="wrapper">
           <SearchResults
             movies={movies}
-            setMovies={setMovies}
             searchTerms={searchTerms}
             nominations={nominations}
             setNominations={setNominations}
